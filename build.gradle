@@ -26,10 +26,8 @@ repositories {
 }
 
 dependencies {
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
     compile("org.springframework.boot:spring-boot-starter-web")
-    compile("org.springframework.boot:spring-boot-starter-tomcat")
-    compile("org.apache.tomcat.embed:tomcat-embed-jasper")
-    compile("javax.servlet:jstl")
     testCompile("org.springframework.boot:spring-boot-starter-test")
     testCompile("org.jsoup:jsoup:1.7.3")
 }

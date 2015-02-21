@@ -5,3 +5,7 @@ target
 .module-cache
 out
 build
+/bin/
+.classpath
+.project
+org.eclipse.jdt.core.prefs
