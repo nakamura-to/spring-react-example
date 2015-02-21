@@ -1,0 +1,39 @@
+buildscript {
+    repositories {
+        maven { url "http://repo.spring.io/libs-snapshot" }
+        maven { url "http://repo.spring.io/milestone" }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.1.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'spring-boot'
+
+version = '0.0.1-SNAPSHOT'
+
+jar {
+    baseName = 'spring-react-example'
+    version =  version
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven { url "http://repo.spring.io/milestone" }
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-tomcat")
+    compile("org.apache.tomcat.embed:tomcat-embed-jasper")
+    compile("javax.servlet:jstl")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+    testCompile("org.jsoup:jsoup:1.7.3")
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
