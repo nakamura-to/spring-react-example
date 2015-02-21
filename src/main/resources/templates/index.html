@@ -6,11 +6,12 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
 </head>
 <body>
-<div id="content" th:utext="${content}"></div>
+<div id="content"></div>
 <script type="text/javascript" th:inline="javascript">
 /*<![CDATA[*/
     $(function () {
-        renderClient(/*[[${data}]]*/ null);
+        var data = JSON.parse(/*[[${data}]]*/ null);
+        renderClient(data);
     });
 /*]]>*/
 </script>
