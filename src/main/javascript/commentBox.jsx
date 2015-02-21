@@ -1,4 +1,5 @@
-var converter = new Showdown.converter();
+var marked = require('marked');
+var React = require('react');
 
 var CommentForm = React.createClass({
     handleSubmit: function (e) {
@@ -25,7 +26,7 @@ var CommentForm = React.createClass({
 
 var Comment = React.createClass({
     render: function () {
-        var rawMarkup = converter.makeHtml(this.props.children.toString());
+        var rawMarkup = marked(this.props.children.toString());
         return (
             <div className="comment">
                 <h2>{this.props.author}</h2>
@@ -115,3 +116,6 @@ var renderServer = function (comments) {
         <CommentBox data={data} url='comments.json' pollInterval={5000} />
     );
 };
+
+global.renderClient = renderClient;
+global.renderServer = renderServer;

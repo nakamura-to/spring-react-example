@@ -2,13 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Hello React</title>
-    <script type="text/javascript" src="vendor/react.js"></script>
-    <script type="text/javascript" src="vendor/showdown.min.js"></script>
+    <script type="text/javascript" src="bundle.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
 </head>
 <body>
 <div id="content" th:utext="${content}"></div>
-<script type="text/javascript" src="commentBox.js"></script>
 <script type="text/javascript" th:inline="javascript">
 /*<![CDATA[*/
     $(function () {

@@ -1,0 +1,28 @@
+{
+  "name": "spring-react-example",
+  "version": "0.0.1",
+  "description": "Spring Boot React Example ============================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nakamura-to/spring-react-example"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nakamura-to/spring-react-example/issues"
+  },
+  "homepage": "https://github.com/nakamura-to/spring-react-example",
+  "devDependencies": {
+    "jsx-loader": "^0.12.2",
+    "webpack": "^1.5.3"
+  },
+  "dependencies": {
+    "marked": "^0.3.3",
+    "react": "^0.12.2",
+    "showdown": "^0.3.1"
+  }
+}

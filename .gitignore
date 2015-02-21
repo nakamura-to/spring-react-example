@@ -9,3 +9,4 @@ build
 .classpath
 .project
 org.eclipse.jdt.core.prefs
+node_modules

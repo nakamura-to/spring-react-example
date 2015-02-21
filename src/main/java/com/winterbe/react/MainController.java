@@ -15,17 +15,15 @@ public class MainController {
 
     private CommentService service;
 
-    private React react;
-
     @Autowired
     public MainController(CommentService service) {
         this.service = service;
-        this.react = new React();
     }
 
     @RequestMapping("/")
     public String index(Map<String, Object> model) throws Exception {
         List<Comment> comments = service.getComments();
+        React react = new React();
         String commentBox = react.renderCommentBox(comments);
         model.put("content", commentBox);
         model.put("data", comments);
