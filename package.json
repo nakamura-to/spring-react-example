@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack",
     "dev": "webpack-dev-server --progress --colors --inline --port 9090 --hot"
   },
   "repository": {

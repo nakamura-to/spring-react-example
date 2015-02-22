@@ -44,7 +44,7 @@ task wrapper(type: Wrapper) {
 }
 
 task webpack(type:Exec) {
-    commandLine 'webpack'
+    commandLine 'npm', 'run', 'webpack'
     standardOutput = new ByteArrayOutputStream()
     ext.output = {
         return standardOutput.toString();
