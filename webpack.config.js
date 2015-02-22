@@ -1,3 +1,5 @@
+var webpack = require('webpack');
+
 module.exports = {
   context: __dirname + '/src/main/javascript',
   entry: './commentBox.jsx',
@@ -14,7 +16,8 @@ module.exports = {
       //tell webpack to use jsx-loader for all *.jsx files
       test: /\.jsx$/,
       loader: 'jsx-loader?insertPragma=React.DOM&harmony'
-    }
+    },
+    { test: /jquery\.js$/, loader: 'expose?$' }
     ]
   },
   resolve: {

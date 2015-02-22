@@ -1,5 +1,6 @@
 var marked = require('marked');
 var React = require('react');
+var $ = require('jquery');
 
 var CommentForm = React.createClass({
     handleSubmit: function (e) {
