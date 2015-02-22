@@ -2,7 +2,8 @@
   "name": "spring-react-example",
   "version": "0.0.1",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --progress --colors --inline --port 9090 --hot"
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,8 @@
   "homepage": "https://github.com/nakamura-to/spring-react-example",
   "devDependencies": {
     "jsx-loader": "^0.12.2",
-    "webpack": "^1.5.3"
+    "webpack": "^1.5.3",
+    "webpack-dev-server": "^1.7.0"
   },
   "dependencies": {
     "marked": "^0.3.3",
