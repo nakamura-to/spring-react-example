@@ -1,8 +1,29 @@
 Spring Boot React Example
 ============================
 
-Example of the official [React.js Tutorial](http://facebook.github.io/react/docs/tutorial.html) using Spring Boot on the server-side.
+Installation
+-------------
 
-The `CommentBox` main view is isomorphic: HTML is initially rendered on the server with Nashorn by utilizing `React.renderToString`. All interactive DOM manipulations are handled by React directly in the browser.
+```
+npm install
+```
 
-For further explanation read this [blog post](http://winterbe.com/posts/2015/02/16/isomorphic-react-webapps-on-the-jvm/).
+Development server
+--------------------
+
+```
+# start the webpack-dev-server
+npm run dev
+# wait for the first compilation is successful
+
+# in another terminal/console
+# start the spring-boot server
+./gradlew bootRun
+
+# open this url in your browser
+http://localhost:8080/
+```
+
+The configuration is webpack.config.js.
+
+It automatically recompiles and refreshes the page when JSX files are changed.
